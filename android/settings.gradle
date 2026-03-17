@@ -1,0 +1,13 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+
+rootProject.name = 'GuvendeKal'
+
+include ':app'
+
+includeBuild('../node_modules/@react-native/gradle-plugin')

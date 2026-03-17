@@ -1,0 +1,55 @@
+{
+  "expo": {
+    "name": "GüvendeKal",
+    "slug": "guvendekal",
+    "version": "2.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0a0a0f"
+    },
+    "updates": { "fallbackToCacheTimeout": 0 },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.guvendekal.app",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "SOS mesajı gönderebilmek için konumunuza ihtiyaç var.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "Güvenli yürüyüş modunda arka planda konum takibi için izin gerekli.",
+        "NSLocationAlwaysUsageDescription": "Güvenli yürüyüş modunda arka planda konum takibi için izin gerekli."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/icon.png",
+        "backgroundColor": "#0a0a0f"
+      },
+      "package": "com.guvendekal.app",
+      "versionCode": 2,
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_BACKGROUND_LOCATION",
+        "SEND_SMS",
+        "READ_CONTACTS",
+        "CALL_PHONE",
+        "VIBRATE",
+        "FOREGROUND_SERVICE",
+        "RECEIVE_BOOT_COMPLETED"
+      ]
+    },
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "GüvendeKal, SOS ve güvenli yürüyüş modu için konumunuza ihtiyaç duyar.",
+          "isAndroidBackgroundLocationEnabled": true,
+          "isAndroidForegroundServiceEnabled": true
+        }
+      ]
+    ]
+  }
+}
