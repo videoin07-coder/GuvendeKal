@@ -23,15 +23,14 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Bundle JS
+      - name: Bundle JS with Expo
         run: |
           mkdir -p android/app/src/main/assets
-          npx react-native bundle \
+          npx expo export:embed \
             --platform android \
-            --dev false \
-            --entry-file index.js \
             --bundle-output android/app/src/main/assets/index.android.bundle \
-            --assets-dest android/app/src/main/res
+            --assets-dest android/app/src/main/res \
+            --dev false
 
       - name: Make gradlew executable
         run: chmod +x android/gradlew
